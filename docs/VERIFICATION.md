@@ -1,18 +1,19 @@
-# Verification record
+# Verification
 
-Validated during creation on 2026-10-26.
+Current interface: a single white-and-green Graph / BFS workspace. No Discover page, saved favorites, decorative illustrations, or marketing headings.
 
 | Check | Result |
 |---|---|
-| `mvn verify` | Passed; 31 JUnit test invocations, 0 failures, 0 errors |
-| Seeded heap vs full-sort oracle | 400 combinations passed |
-| BFS vs Floyd–Warshall distance oracle | All 576 ordered recipe pairs passed |
-| `node scripts/check-demo.mjs` | 120 searches + 576 paths/traces + 14 Trie queries match Java |
-| JavaScript syntax | `node --check` passed for application and engine |
-| Real Spring HTTP integration | UI, catalog, API runtime config, autocomplete, search, path, 400 validation, and 404 recipe checks passed |
-| Desktop browser QA | Presets, recipe dialog, save action, graph path/trace, algorithm panel inspected |
-| Mobile browser QA | 390px iframe (375px content viewport with scrollbar), no horizontal overflow; preset and recipe dialog tested |
+| `mvn verify` | Passed; 31 Java test invocations, no failures or errors |
+| Heap vs full-sort oracle (retained API) | 400 seeded cases passed |
+| BFS vs Floyd–Warshall | All 576 ordered recipe pairs passed |
+| Browser/Java contract | 120 searches, 576 paths/traces, 14 Trie queries match |
+| Playback state | 6,901 snapshots across 576 traces passed, including rewind and bounds |
+| Browser interactions | Reset, Next, Back, Play/Pause, same-node path, unreachable path, endpoint changes, vertex selection |
+| Layout | Desktop and 390px frame; horizontal scrolling is confined to graph/table containers |
 
-The UI tests were manual browser interactions rather than an automated browser test suite. Screenshots document the rendered interface. Unit/API checks are repeatable through Maven and the parity script. The test resource selects Mockito’s subclass mock maker so Spring’s test listeners do not require JVM agent self-attachment; no mock is substituted for the real API server.
+The initial graph displays the completed default path. Reset moves to the initial queue; Run BFS computes and animates a new search. Current identifies the node processed at the selected step. Queue and Visited count discovered nodes; Parent contains one predecessor for every discovered non-start node. The path is hidden until the terminal step.
 
-Not claimed: production load testing, measured performance improvements over scans, deployed JVM hosting, Docker build execution, or a successful GitHub Actions run before the repository is actually published.
+`check-playback.mjs` validates replay against Java-generated traces, not a second invocation of the UI. The pure playback model does not mutate recorded snapshots. Manual browser checks complement the Java/API and Node tests; they are not a full automated browser suite.
+
+Docker execution, production load testing, hosted JVM service, and performance improvements over simpler scans are not claimed. The public build runs the browser engine, explicitly labeled in the footer.

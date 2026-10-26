@@ -24,7 +24,9 @@ jobs:
         run: |
           node --check src/main/resources/static/app.js
           node --check src/main/resources/static/engine.js
+          node --check src/main/resources/static/graph-state.js
           node scripts/check-demo.mjs
+          node scripts/check-playback.mjs
       - name: Export the public demo
         run: python3 scripts/build-demo.py
       - uses: actions/upload-artifact@v4

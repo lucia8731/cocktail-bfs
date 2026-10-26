@@ -1,5 +1,12 @@
 # Architecture & algorithm notes
 
+## Current interface
+
+The current application is a single Graph / BFS workspace. It exposes the graph, queue, visited set, predecessor map, shortest path, adjacency list, and trace. Discover, saved recipes, illustrations, and marketing sections were removed. The search/Trie/heap APIs below remain as backend coursework exercises, not UI pages.
+
+`graph-state.js` replays only the chosen prefix of Java’s trace. Step 0 has the start vertex in both the queue and visited set, an empty parent map, and no current vertex. After each step, Current identifies the vertex just processed. Rewinding rebuilds state rather than retaining future discoveries. The full path is displayed only at the terminal step.
+
+
 ## Two runtimes, one interface
 
 ```mermaid
@@ -63,7 +70,7 @@ Trace rows contain the node just dequeued, the queue after processing it, and th
 
 ## Boundaries
 
-Controllers validate request sizes, known filter values, and K. The service rejects ingredients outside the catalog. The application is read-only and contains no accounts, credentials, database, or external API calls. Favorites stay in localStorage. The browser escapes catalog/error strings before HTML insertion, debounces searches, and ignores obsolete search/path responses.
+Controllers validate request sizes, known filter values, and K. The service rejects ingredients outside the catalog. The application is read-only and contains no accounts, credentials, database, or external API calls. The graph interface has no saved favorites or persistent user data. The browser escapes catalog/error strings before HTML insertion, debounces searches, and ignores obsolete search/path responses.
 
 ## Suggested extension
 
