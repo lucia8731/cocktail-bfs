@@ -1,0 +1,660 @@
+[
+  {
+    "id": "margarita",
+    "name": "Margarita",
+    "base": "tequila",
+    "family": "Sour",
+    "color": "#d6df83",
+    "glass": "coupe",
+    "description": "Bright lime, a citrus snap, and a clean agave finish.",
+    "ingredients": [
+      "tequila",
+      "lime juice",
+      "triple sec"
+    ],
+    "measures": [
+      "50 ml",
+      "25 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain into a chilled, optionally salt-rimmed coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "paloma",
+    "name": "Paloma",
+    "base": "tequila",
+    "family": "Highball",
+    "color": "#efa5a1",
+    "glass": "highball",
+    "description": "A pink grapefruit afternoon, stretched over ice.",
+    "ingredients": [
+      "tequila",
+      "lime juice",
+      "grapefruit soda"
+    ],
+    "measures": [
+      "50 ml",
+      "15 ml",
+      "120 ml"
+    ],
+    "steps": [
+      "Build tequila and lime over ice.",
+      "Top with grapefruit soda and stir gently."
+    ],
+    "tags": [
+      "citrusy",
+      "refreshing"
+    ]
+  },
+  {
+    "id": "tequila-sour",
+    "name": "Tequila Sour",
+    "base": "tequila",
+    "family": "Sour",
+    "color": "#e2cf79",
+    "glass": "coupe",
+    "description": "Agave meets a silky, sweet-and-sour balance.",
+    "ingredients": [
+      "tequila",
+      "lime juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "30 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "sweet"
+    ]
+  },
+  {
+    "id": "mezcalita",
+    "name": "Mezcalita",
+    "base": "mezcal",
+    "family": "Sour",
+    "color": "#eaa65b",
+    "glass": "coupe",
+    "description": "Smoky agave with a generous squeeze of orange.",
+    "ingredients": [
+      "mezcal",
+      "lime juice",
+      "triple sec",
+      "orange juice"
+    ],
+    "measures": [
+      "45 ml",
+      "25 ml",
+      "15 ml",
+      "30 ml"
+    ],
+    "steps": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "smoky",
+      "citrusy"
+    ]
+  },
+  {
+    "id": "oaxaca-sour",
+    "name": "Oaxaca Sour",
+    "base": "mezcal",
+    "family": "Sour",
+    "color": "#c5c879",
+    "glass": "rocks",
+    "description": "A smoky house sour with a fresh lime edge.",
+    "ingredients": [
+      "mezcal",
+      "lime juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "25 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain over fresh ice."
+    ],
+    "tags": [
+      "smoky",
+      "bright"
+    ]
+  },
+  {
+    "id": "daiquiri",
+    "name": "Daiquiri",
+    "base": "rum",
+    "family": "Sour",
+    "color": "#e6e8b0",
+    "glass": "coupe",
+    "description": "Three ingredients. Nothing to hide behind.",
+    "ingredients": [
+      "white rum",
+      "lime juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "25 ml",
+      "15 ml"
+    ],
+    "steps": [
+      "Shake hard with ice.",
+      "Fine-strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "mojito",
+    "name": "Mojito",
+    "base": "rum",
+    "family": "Highball",
+    "color": "#a4d6aa",
+    "glass": "highball",
+    "description": "Mint, lime, and a little room to breathe.",
+    "ingredients": [
+      "white rum",
+      "lime juice",
+      "simple syrup",
+      "mint",
+      "soda water"
+    ],
+    "measures": [
+      "50 ml",
+      "25 ml",
+      "20 ml",
+      "8 leaves",
+      "80 ml"
+    ],
+    "steps": [
+      "Gently press mint with lime and syrup.",
+      "Add rum and ice, top with soda, and stir."
+    ],
+    "tags": [
+      "refreshing",
+      "herbal"
+    ]
+  },
+  {
+    "id": "cuba-libre",
+    "name": "Cuba Libre",
+    "base": "rum",
+    "family": "Highball",
+    "color": "#a66c42",
+    "glass": "highball",
+    "description": "Dark cola, fresh lime, and a familiar rhythm.",
+    "ingredients": [
+      "white rum",
+      "lime juice",
+      "cola"
+    ],
+    "measures": [
+      "50 ml",
+      "15 ml",
+      "120 ml"
+    ],
+    "steps": [
+      "Build over ice.",
+      "Stir gently."
+    ],
+    "tags": [
+      "sweet",
+      "refreshing"
+    ]
+  },
+  {
+    "id": "gimlet",
+    "name": "Gimlet",
+    "base": "gin",
+    "family": "Sour",
+    "color": "#bad99c",
+    "glass": "coupe",
+    "description": "A minimal little masterpiece of gin and lime.",
+    "ingredients": [
+      "gin",
+      "lime juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "25 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Fine-strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "gin-sour",
+    "name": "Gin Sour",
+    "base": "gin",
+    "family": "Sour",
+    "color": "#eddb88",
+    "glass": "coupe",
+    "description": "Botanical, lemony, beautifully uncomplicated.",
+    "ingredients": [
+      "gin",
+      "lemon juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "30 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "tom-collins",
+    "name": "Tom Collins",
+    "base": "gin",
+    "family": "Highball",
+    "color": "#d4dda0",
+    "glass": "highball",
+    "description": "A tall, sparkling lemon garden.",
+    "ingredients": [
+      "gin",
+      "lemon juice",
+      "simple syrup",
+      "soda water"
+    ],
+    "measures": [
+      "50 ml",
+      "25 ml",
+      "20 ml",
+      "100 ml"
+    ],
+    "steps": [
+      "Shake gin, lemon, and syrup with ice.",
+      "Strain over fresh ice and top with soda."
+    ],
+    "tags": [
+      "refreshing",
+      "citrusy"
+    ]
+  },
+  {
+    "id": "bees-knees",
+    "name": "Bee’s Knees",
+    "base": "gin",
+    "family": "Sour",
+    "color": "#e7bb5e",
+    "glass": "coupe",
+    "description": "Honey softens the edges of bright lemon and gin.",
+    "ingredients": [
+      "gin",
+      "lemon juice",
+      "honey syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "25 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Fine-strain into a chilled coupe."
+    ],
+    "tags": [
+      "sweet",
+      "citrusy"
+    ]
+  },
+  {
+    "id": "negroni",
+    "name": "Negroni",
+    "base": "gin",
+    "family": "Spirit-forward",
+    "color": "#d26943",
+    "glass": "rocks",
+    "description": "Bittersweet. Botanical. Unapologetically itself.",
+    "ingredients": [
+      "gin",
+      "campari",
+      "sweet vermouth"
+    ],
+    "measures": [
+      "30 ml",
+      "30 ml",
+      "30 ml"
+    ],
+    "steps": [
+      "Stir with ice until chilled.",
+      "Strain over a large ice cube."
+    ],
+    "tags": [
+      "bitter",
+      "bold"
+    ]
+  },
+  {
+    "id": "martini",
+    "name": "Dry Martini",
+    "base": "gin",
+    "family": "Spirit-forward",
+    "color": "#c8d9bc",
+    "glass": "martini",
+    "description": "Quiet precision, served very cold.",
+    "ingredients": [
+      "gin",
+      "dry vermouth"
+    ],
+    "measures": [
+      "60 ml",
+      "10 ml"
+    ],
+    "steps": [
+      "Stir with ice until very cold.",
+      "Strain into a chilled martini glass."
+    ],
+    "tags": [
+      "dry",
+      "bold"
+    ]
+  },
+  {
+    "id": "white-lady",
+    "name": "White Lady",
+    "base": "gin",
+    "family": "Sour",
+    "color": "#ece0b7",
+    "glass": "coupe",
+    "description": "Orange citrus and gin with an elegant lemon lift.",
+    "ingredients": [
+      "gin",
+      "lemon juice",
+      "triple sec"
+    ],
+    "measures": [
+      "50 ml",
+      "25 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Fine-strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "whiskey-sour",
+    "name": "Whiskey Sour",
+    "base": "whiskey",
+    "family": "Sour",
+    "color": "#d3a957",
+    "glass": "rocks",
+    "description": "A golden balance of bourbon, lemon, and sweetness.",
+    "ingredients": [
+      "bourbon",
+      "lemon juice",
+      "simple syrup"
+    ],
+    "measures": [
+      "60 ml",
+      "30 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain over fresh ice."
+    ],
+    "tags": [
+      "citrusy",
+      "bold"
+    ]
+  },
+  {
+    "id": "old-fashioned",
+    "name": "Old Fashioned",
+    "base": "whiskey",
+    "family": "Spirit-forward",
+    "color": "#bc783f",
+    "glass": "rocks",
+    "description": "Bourbon, a little sugar, and aromatic depth.",
+    "ingredients": [
+      "bourbon",
+      "simple syrup",
+      "aromatic bitters"
+    ],
+    "measures": [
+      "60 ml",
+      "7.5 ml",
+      "2 dashes"
+    ],
+    "steps": [
+      "Stir all ingredients with ice.",
+      "Serve over a large ice cube."
+    ],
+    "tags": [
+      "bold",
+      "sweet"
+    ]
+  },
+  {
+    "id": "manhattan",
+    "name": "Manhattan",
+    "base": "whiskey",
+    "family": "Spirit-forward",
+    "color": "#ab654a",
+    "glass": "coupe",
+    "description": "Warm whiskey and vermouth in a city-night silhouette.",
+    "ingredients": [
+      "bourbon",
+      "sweet vermouth",
+      "aromatic bitters"
+    ],
+    "measures": [
+      "60 ml",
+      "30 ml",
+      "2 dashes"
+    ],
+    "steps": [
+      "Stir with ice until chilled.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "bold",
+      "herbal"
+    ]
+  },
+  {
+    "id": "boulevardier",
+    "name": "Boulevardier",
+    "base": "whiskey",
+    "family": "Spirit-forward",
+    "color": "#c05d41",
+    "glass": "rocks",
+    "description": "The Negroni’s warmer, whiskey-loving relative.",
+    "ingredients": [
+      "bourbon",
+      "campari",
+      "sweet vermouth"
+    ],
+    "measures": [
+      "45 ml",
+      "30 ml",
+      "30 ml"
+    ],
+    "steps": [
+      "Stir with ice.",
+      "Strain over a large ice cube."
+    ],
+    "tags": [
+      "bitter",
+      "bold"
+    ]
+  },
+  {
+    "id": "cosmopolitan",
+    "name": "Cosmopolitan",
+    "base": "vodka",
+    "family": "Sour",
+    "color": "#d47991",
+    "glass": "martini",
+    "description": "Cranberry pink with a crisp citrus finish.",
+    "ingredients": [
+      "vodka",
+      "lime juice",
+      "triple sec",
+      "cranberry juice"
+    ],
+    "measures": [
+      "45 ml",
+      "15 ml",
+      "15 ml",
+      "30 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Fine-strain into a chilled martini glass."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "kamikaze",
+    "name": "Kamikaze",
+    "base": "vodka",
+    "family": "Sour",
+    "color": "#c4d7aa",
+    "glass": "coupe",
+    "description": "A sharp, clean three-ingredient citrus cocktail.",
+    "ingredients": [
+      "vodka",
+      "lime juice",
+      "triple sec"
+    ],
+    "measures": [
+      "45 ml",
+      "20 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bright"
+    ]
+  },
+  {
+    "id": "moscow-mule",
+    "name": "Moscow Mule",
+    "base": "vodka",
+    "family": "Highball",
+    "color": "#d8b27d",
+    "glass": "highball",
+    "description": "Ginger heat, fresh lime, and an icy finish.",
+    "ingredients": [
+      "vodka",
+      "lime juice",
+      "ginger beer"
+    ],
+    "measures": [
+      "50 ml",
+      "15 ml",
+      "120 ml"
+    ],
+    "steps": [
+      "Build vodka and lime over ice.",
+      "Top with ginger beer and stir gently."
+    ],
+    "tags": [
+      "refreshing",
+      "spicy"
+    ]
+  },
+  {
+    "id": "sidecar",
+    "name": "Sidecar",
+    "base": "brandy",
+    "family": "Sour",
+    "color": "#dbaa62",
+    "glass": "coupe",
+    "description": "Cognac’s warm depth, framed by orange and lemon.",
+    "ingredients": [
+      "cognac",
+      "lemon juice",
+      "triple sec"
+    ],
+    "measures": [
+      "50 ml",
+      "20 ml",
+      "20 ml"
+    ],
+    "steps": [
+      "Shake with ice.",
+      "Strain into a chilled coupe."
+    ],
+    "tags": [
+      "citrusy",
+      "bold"
+    ]
+  },
+  {
+    "id": "garden-fizz",
+    "name": "Garden Fizz",
+    "base": "zero-proof",
+    "family": "Zero-proof",
+    "color": "#b9d89b",
+    "glass": "highball",
+    "description": "A house alcohol-free serve, full of mint and citrus.",
+    "ingredients": [
+      "lime juice",
+      "simple syrup",
+      "mint",
+      "soda water"
+    ],
+    "measures": [
+      "25 ml",
+      "20 ml",
+      "8 leaves",
+      "120 ml"
+    ],
+    "steps": [
+      "Gently press mint with lime and syrup.",
+      "Add ice, top with soda, and stir."
+    ],
+    "tags": [
+      "refreshing",
+      "herbal"
+    ]
+  }
+]

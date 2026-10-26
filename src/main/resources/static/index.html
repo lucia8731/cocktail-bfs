@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#183e35"><meta name="description" content="A cocktail discovery lab where good taste meets data structures. Explore your bar, trace recipe connections, and see every algorithm at work.">
+<title>Last Call — Cocktail Algorithm Lab</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<script src="runtime-config.js" defer></script><script src="engine.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="#" aria-label="Last Call home"><span class="brand-mark">LC<span>✳</span></span><span>LAST CALL<small>THE COCKTAIL ALGORITHM LAB</small></span></a>
+<div class="sidebar-heading"><span>YOUR BAR SHELF</span><span id="pantry-count">0</span></div>
+<p class="sidebar-copy">Start with what you have.<br>We’ll find your next favorite.</p>
+<div class="preset-row"><button class="preset active" data-preset="house">House bar</button><button class="preset" data-preset="agave">Agave lover</button><button class="preset" data-preset="zero">Zero proof</button></div>
+<div class="ingredient-input"><label class="sr-only" for="ingredient-search">Add an ingredient</label><input id="ingredient-search" autocomplete="off" placeholder="＋ Add an ingredient"><div class="suggestions" id="ingredient-suggestions" hidden></div></div>
+<div class="pantry-chips" id="pantry-chips"></div>
+<button class="text-button reset" id="clear-pantry">Clear shelf <span>↗</span></button>
+<div class="shelf-note"><span class="note-icon">⌘</span><div><strong>A little set theory.</strong><p>Your shelf is a HashSet. Every ingredient check is an average O(1) lookup.</p></div></div>
+<div class="sidebar-bottom"><div class="status-dot"></div><span id="runtime">Connecting to engine…</span><small>JAVA / SPRING BOOT PROJECT</small></div>
+</aside>
+<main>
+<header class="topbar"><div class="breadcrumb">THE LAB <span>/</span> <span id="page-label">DISCOVERY</span></div><a href="https://github.com/lucia8731/last-call" target="_blank" rel="noopener" class="source-link">View source <span>↗</span></a></header>
+<nav class="tabs" aria-label="Workspace"><button data-tab="discover" class="active">Discover <span>01</span></button><button data-tab="graph">Recipe graph <span>02</span></button><button data-tab="lab">Under the hood <span>03</span></button><button data-tab="saved" class="saved-tab">Saved <span id="saved-count">0</span></button></nav>
+<section id="discover-view" class="view">
+<div class="hero"><div class="hero-content"><div class="eyebrow"><span class="tiny-star">✳</span> MIXOLOGY, MEET COMPUTER SCIENCE.</div><h1>Good taste.<br><em>Great algorithms.</em></h1><p>Your ingredients. A world of possibilities.<br>Find your next pour — and see the logic behind it.</p><div class="hero-bottom"><span class="hero-pill">24 curated recipes</span><span class="hero-caption">CRAFTED WITH JAVA & CURIOSITY</span></div></div><div class="hero-art" id="hero-art" aria-hidden="true"></div><span class="hero-coordinate">35°40′ N &nbsp; 139°42′ E &nbsp; / &nbsp; TOKYO</span></div>
+<div class="discovery-heading"><div><span class="eyebrow dark">A LITTLE INSPIRATION</span><h2>What’s your next pour?</h2></div><button id="surprise" class="surprise-button">✳ &nbsp; Surprise me</button></div>
+<div class="filter-bar"><div class="cocktail-search"><span>⌕</span><label class="sr-only" for="search">Search cocktails</label><input id="search" placeholder="Find a cocktail…" autocomplete="off" maxlength="80"><div class="suggestions" id="cocktail-suggestions" hidden></div></div><label class="sr-only" for="base-filter">Base spirit</label><select id="base-filter"><option value="all">All spirits</option><option value="gin">Gin</option><option value="tequila">Tequila</option><option value="mezcal">Mezcal</option><option value="rum">Rum</option><option value="whiskey">Whiskey</option><option value="vodka">Vodka</option><option value="brandy">Brandy</option><option value="zero-proof">Zero proof</option></select><label class="ready-toggle"><input type="checkbox" id="ready-only"><span class="toggle-track"></span> Ready to make</label></div>
+<div class="vibe-row" aria-label="Flavor filters"><button class="vibe active" data-tag="all">All moods</button><button class="vibe" data-tag="citrusy">Citrusy</button><button class="vibe" data-tag="refreshing">Refreshing</button><button class="vibe" data-tag="smoky">Smoky</button><button class="vibe" data-tag="bitter">Bittersweet</button><button class="vibe" data-tag="bold">Bold</button><button class="vibe" data-tag="sweet">Sweet</button></div>
+<div class="results-meta"><span id="result-count" aria-live="polite">Curating your shelf…</span><label>TOP <select id="top-k" aria-label="Maximum results"><option>6</option><option>12</option><option>24</option></select><span class="sort-note"> / MATCH SCORE ↓</span></label></div>
+<div id="results" class="card-grid"></div>
+<div class="engine-strip"><div><span class="pulse-dot"></span><strong>THE LOGIC BEHIND THE POUR</strong></div><div id="quick-metrics">Waiting for your ingredients</div><button id="inspect-search">Inspect algorithm ↗</button></div>
+</section>
+<section id="graph-view" class="view" hidden>
+<div class="section-intro"><span class="eyebrow dark">CONNECTIONS, NOT COINCIDENCES</span><h1>Every recipe<br>has a <em>relative.</em></h1><p>Two cocktails connect when they share at least two core ingredients.<br>Find the fewest recipe-to-recipe hops with breadth-first search.</p></div>
+<div class="graph-controls"><label>STARTING POUR<select id="path-from"></select></label><button id="swap-path" class="icon-button" aria-label="Swap start and destination">⇄</button><label>DESTINATION<select id="path-to"></select></label><button id="find-path" class="primary-button">Trace a connection ↗</button></div>
+<div class="graph-legend"><span><i class="legend-dot selected"></i> Shortest path</span><span><i class="legend-dot"></i> Recipe node</span><span>Click a node to see its recipe</span></div>
+<div class="graph-canvas" id="graph-canvas"></div><div id="path-result" aria-live="polite"></div>
+<div class="trace-panel"><div class="panel-title"><span class="eyebrow dark">BFS / LIVE EXECUTION TRACE</span><span id="bfs-metrics"></span></div><div id="bfs-trace"></div></div>
+</section>
+<section id="lab-view" class="view" hidden>
+<div class="section-intro"><span class="eyebrow dark">NO BLACK BOXES HERE</span><h1>Good code.<br><em>On the rocks.</em></h1><p>A small, observable application of data structures.<br>Real algorithms, deliberate trade-offs, and a clear path through the code.</p></div>
+<div id="runtime-explanation" class="runtime-explanation"></div>
+<div class="lab-grid"><article class="lab-card"><span class="lab-number">01 / SEARCH</span><h2>The prefix tree.</h2><p>Autocomplete walks one character at a time through a Trie, then visits only the matching subtree.</p><label for="trie-probe">TRY A PREFIX</label><input id="trie-probe" value="ma" maxlength="80" placeholder="e.g. ma"><div id="trie-result"></div><code>Trie.java → suggest(prefix, limit)</code></article>
+<article class="lab-card"><span class="lab-number">02 / RETRIEVAL</span><h2>Skip the full scan.</h2><p>An inverted index maps each ingredient to recipe IDs. We take the union of matching recipes, then check ingredients against your HashSet.</p><div class="index-demo" id="index-demo"></div><code>CocktailCatalog.java → recipesUsing()</code></article>
+<article class="lab-card"><span class="lab-number">03 / RANKING</span><h2>Keep the best K.</h2><p>A bounded PriorityQueue keeps the worst retained match at its root. A better match replaces it. We sort only the retained results.</p><div class="heap-demo" id="heap-demo"></div><code>DiscoveryService.java → discover()</code></article>
+<article class="lab-card"><span class="lab-number">04 / EXPLORATION</span><h2>Take the shortest route.</h2><p>An adjacency list stores recipe neighbors. BFS uses an ArrayDeque and a visited set to find the shortest path in an unweighted graph.</p><div class="complexity">O(V + E)<small>CORE BFS · O(V) EXTRA SPACE</small></div><button class="text-button" id="go-graph">See BFS in action ↗</button><code>RecipeGraph.java → shortestPath()</code></article></div>
+<div class="engineering-note"><span>THE ENGINEERING NOTE</span><h2>Small dataset. Real decisions.</h2><p>At 24 recipes, a linear scan would be simpler. These structures are here to make their behavior inspectable and their trade-offs explicit — not to claim a benchmark win. The graph is built once in O(N² × I) expected time; path queries then run in O(V + E). The optional queue snapshots add O(V²) time and space in the worst case. Metrics count actual operations, not invented latency.</p><a href="https://github.com/lucia8731/last-call" target="_blank" rel="noopener">Read the architecture & tests ↗</a></div>
+</section>
+<section id="saved-view" class="view" hidden><div class="section-intro"><span class="eyebrow dark">YOUR LITTLE BLACK BOOK</span><h1>Worth another <em>round.</em></h1><p>Your saved recipes stay in this browser. No account needed.</p></div><div id="saved-results" class="card-grid"></div></section>
+<footer><span>LAST CALL <span class="footer-star">✳</span> A STUDY IN TASTE & DATA STRUCTURES</span><span>BUILT BY HANA UENO · JAVA 17 / SPRING BOOT</span></footer>
+</main></div>
+<dialog id="recipe-dialog"><button id="close-dialog" class="dialog-close" aria-label="Close recipe">×</button><div id="recipe-detail"></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>

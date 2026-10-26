@@ -1,0 +1,10 @@
+# Optional JVM hosting. Creates no service or cost until you choose to deploy.
+services:
+  - type: web
+    name: last-call
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: '8080'

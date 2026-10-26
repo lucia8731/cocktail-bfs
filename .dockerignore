@@ -1,0 +1,8 @@
+.git
+.github
+.openai
+target
+dist
+docs
+node_modules
+.env

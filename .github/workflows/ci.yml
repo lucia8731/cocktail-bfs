@@ -1,0 +1,37 @@
+name: Java CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test and package Spring Boot
+        run: mvn --batch-mode --no-transfer-progress verify
+      - name: Check browser code and Java parity
+        run: |
+          node --check src/main/resources/static/app.js
+          node --check src/main/resources/static/engine.js
+          node scripts/check-demo.mjs
+      - name: Export the public demo
+        run: python3 scripts/build-demo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: last-call-jar
+          path: target/last-call-1.0.0.jar
+      - uses: actions/upload-artifact@v4
+        with:
+          name: last-call-demo
+          path: dist/
