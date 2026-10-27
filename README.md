@@ -58,8 +58,6 @@ node scripts/check-playback.mjs
 - Playback checks every step of all 576 traces: queue order, visited membership, parent links, final counts, rewind, and bounds.
 - HTTP integration tests exercise the real Spring Boot server, UI assets, validation, and API errors.
 
-GitHub Actions verifies the application and publishes the browser app. It also uploads the runnable jar and static build as artifacts.
-
 ## API
 
 ```bash
@@ -72,5 +70,3 @@ The backend also retains the earlier Trie autocomplete, ingredient index, and bo
 `Dockerfile` and `render.yaml` provide optional JVM deployment configuration. Docker execution and a hosted JVM service are not claimed. See [deployment notes](docs/DEPLOYMENT.md).
 
 Recipes are small house variations; ice and optional garnish are omitted from edge matching. This is an educational project developed with AI assistance, not a production inventory or recommendation system.
-
-[MIT license](LICENSE)
