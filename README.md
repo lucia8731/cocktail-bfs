@@ -2,7 +2,7 @@
 
 A student data structures experiment: step through **breadth-first search** on a graph of 24 cocktail recipes.
 
-[Live app](https://lucia8731.github.io/last-call/) · [Architecture](docs/ARCHITECTURE.md) · [日本語学習ガイド](docs/LEARNING_GUIDE.ja.md)
+[Live app](https://lucia8731.github.io/last-call/) · [Architecture](docs/ARCHITECTURE.md) · [日本語ガイド](docs/LEARNING_GUIDE.ja.md)
 
 ![Graph and BFS state](docs/graph.jpg)
 
