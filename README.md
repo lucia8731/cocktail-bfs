@@ -25,9 +25,6 @@ The interface uses white and green, two font families, and no decorative illustr
 | Parent map | Reconstruct a shortest path | [RecipeGraph.java](src/main/java/com/hana/lastcall/algorithm/RecipeGraph.java) |
 | Playback state | Reconstruct queue/set/map at any recorded step | [graph-state.js](src/main/resources/static/graph-state.js) |
 
-The unweighted, undirected graph connects recipes sharing at least two exact core ingredient names. BFS minimizes **edge count**, not purchases or ingredient changes. An isolated vertex is valid: Dry Martini → Negroni has no route; Dry Martini → Dry Martini is a zero-edge route.
-
-The core BFS costs O(V + E) time and O(V) auxiliary space. Recording the full queue at every step adds up to O(V²) time and space. Playback rebuilds only the selected trace prefix, so moving backward removes future discoveries and parent links. See [complexity notes](docs/ARCHITECTURE.md).
 
 ## Java / Spring Boot
 
