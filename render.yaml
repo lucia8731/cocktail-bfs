@@ -1,7 +1,7 @@
 # Optional JVM hosting. Creates no service or cost until you choose to deploy.
 services:
   - type: web
-    name: last-call
+    name: cocktail-bfs
     runtime: docker
     plan: free
     healthCheckPath: /api/health

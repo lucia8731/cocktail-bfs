@@ -1,7 +1,7 @@
-package com.hana.lastcall.service;
+package com.hana.cocktailbfs.service;
 
-import com.hana.lastcall.catalog.CocktailCatalog;
-import com.hana.lastcall.model.Cocktail;
+import com.hana.cocktailbfs.catalog.CocktailCatalog;
+import com.hana.cocktailbfs.model.Cocktail;
 import org.springframework.stereotype.Service;
 import java.util.*;
 

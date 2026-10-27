@@ -1,5 +1,5 @@
-package com.hana.lastcall;
-import com.hana.lastcall.algorithm.Trie;
+package com.hana.cocktailbfs;
+import com.hana.cocktailbfs.algorithm.Trie;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 import java.util.List;

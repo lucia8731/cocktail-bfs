@@ -9,7 +9,7 @@ if dist.exists():
     shutil.rmtree(dist)
 shutil.copytree(root / 'src/main/resources/static', dist)
 shutil.copy2(root / 'src/main/resources/cocktails.json', dist / 'cocktails.json')
-(dist / 'runtime-config.js').write_text("// Public static demo. The Spring Boot artifact uses the Java API.\nwindow.LAST_CALL_MODE = 'demo';\n")
+(dist / 'runtime-config.js').write_text("// Public static demo. The Spring Boot artifact uses the Java API.\nwindow.COCKTAIL_BFS_MODE = 'demo';\n")
 # Exclude build output, Site internals, credentials, and Git state.
 excluded = {'.git', '.openai', 'target', 'dist', 'node_modules', '.idea', '.vscode', '__pycache__'}
 with zipfile.ZipFile(dist / 'source.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
@@ -19,5 +19,5 @@ with zipfile.ZipFile(dist / 'source.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
             continue
         if file.name in {'.env', '.DS_Store'}:
             continue
-        archive.write(file, Path('last-call') / relative)
+        archive.write(file, Path('cocktail-bfs') / relative)
 print(f'Exported browser demo and source snapshot to {dist}')

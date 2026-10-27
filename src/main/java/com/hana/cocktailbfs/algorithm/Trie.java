@@ -1,4 +1,4 @@
-package com.hana.lastcall.algorithm;
+package com.hana.cocktailbfs.algorithm;
 import java.util.*;
 /** Prefix tree built once at startup; reads are safe after construction. */
 public final class Trie {

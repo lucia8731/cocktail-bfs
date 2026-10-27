@@ -1,5 +1,5 @@
-package com.hana.lastcall.algorithm;
-import com.hana.lastcall.model.Cocktail;
+package com.hana.cocktailbfs.algorithm;
+import com.hana.cocktailbfs.model.Cocktail;
 import java.util.*;
 /** Undirected, unweighted graph; an edge means at least two shared core ingredients. */
 public final class RecipeGraph {

@@ -1,7 +1,7 @@
-package com.hana.lastcall;
+package com.hana.cocktailbfs;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hana.lastcall.catalog.CocktailCatalog;
-import com.hana.lastcall.algorithm.RecipeGraph;
+import com.hana.cocktailbfs.catalog.CocktailCatalog;
+import com.hana.cocktailbfs.algorithm.RecipeGraph;
 import org.junit.jupiter.api.*;
 import java.util.*;
 import static org.assertj.core.api.Assertions.*;

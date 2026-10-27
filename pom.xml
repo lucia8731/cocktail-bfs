@@ -8,9 +8,9 @@
     <relativePath/>
   </parent>
   <groupId>com.hana</groupId>
-  <artifactId>last-call</artifactId>
+  <artifactId>cocktail-bfs</artifactId>
   <version>1.0.0</version>
-  <name>Last Call</name>
+  <name>Cocktail BFS</name>
   <description>Cocktail discovery through observable data structures</description>
   <properties>
     <java.version>17</java.version>

@@ -63,7 +63,7 @@ class BoundedHeap {
 }
 class CocktailEngine {
   async init() {
-    this.mode = window.LAST_CALL_MODE === 'demo' ? 'demo' : 'api';
+    this.mode = window.COCKTAIL_BFS_MODE === 'demo' ? 'demo' : 'api';
     if (this.mode === 'api') {
       const data = await this.request('api/catalog');
       this.cocktails = data.cocktails; this.ingredients = data.ingredients; this.edges = data.edges;

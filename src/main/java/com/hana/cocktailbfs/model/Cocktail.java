@@ -1,4 +1,4 @@
-package com.hana.lastcall.model;
+package com.hana.cocktailbfs.model;
 import java.util.List;
 /** Immutable entry. Ingredients are core ingredients; garnish and ice are omitted. */
 public record Cocktail(String id, String name, String base, String family, String color,

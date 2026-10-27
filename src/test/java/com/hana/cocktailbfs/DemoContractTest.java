@@ -1,7 +1,7 @@
-package com.hana.lastcall;
+package com.hana.cocktailbfs;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hana.lastcall.catalog.CocktailCatalog;
-import com.hana.lastcall.service.DiscoveryService;
+import com.hana.cocktailbfs.catalog.CocktailCatalog;
+import com.hana.cocktailbfs.service.DiscoveryService;
 import org.junit.jupiter.api.Test;
 import java.nio.file.*;
 import java.util.*;

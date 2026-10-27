@@ -1,7 +1,7 @@
-package com.hana.lastcall.api;
+package com.hana.cocktailbfs.api;
 
-import com.hana.lastcall.catalog.CocktailCatalog;
-import com.hana.lastcall.service.DiscoveryService;
+import com.hana.cocktailbfs.catalog.CocktailCatalog;
+import com.hana.cocktailbfs.service.DiscoveryService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import org.springframework.http.HttpStatus;

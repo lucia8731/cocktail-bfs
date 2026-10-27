@@ -2,9 +2,9 @@
 
 ## Published interactive demo
 
-https://lucia8731.github.io/last-call/
+https://lucia8731.github.io/cocktail-bfs/
 
-https://last-call-algorithm-lab.livelyearth32768.chatgpt.site
+https://cocktail-bfs.livelyearth32768.chatgpt.site
 
 This is the static browser runtime. It is deliberately labeled as such and needs no server, API key, or database. It is suitable for a recruiter to explore immediately.
 
@@ -23,8 +23,8 @@ The repository includes an executable Spring Boot jar build and a multi-stage Do
 
 For a container host:
 
-1. Build `docker build -t last-call .`.
-2. Run `docker run --rm -p 8080:8080 last-call`.
+1. Build `docker build -t cocktail-bfs .`.
+2. Run `docker run --rm -p 8080:8080 cocktail-bfs`.
 3. Check `/api/health` and the **Java / Spring Boot** badge.
 
 `render.yaml` is an optional blueprint for a compatible Docker host. No service is provisioned by including it, and no hosting purchase has been made. Deploying requires the owner’s hosting account; check the provider’s current plan availability and conditions before creating a service. A sleeping free-tier server can have a cold start. No particular price or availability is promised here.

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'src/main/resources/cocktails.json'), 'utf8'));
 const contract = JSON.parse(await fs.readFile(path.join(root, 'target/demo-contract.json'), 'utf8'));
-const context = vm.createContext({ window: { LAST_CALL_MODE: 'demo' },
+const context = vm.createContext({ window: { COCKTAIL_BFS_MODE: 'demo' },
   fetch: async url => { assert.equal(url, 'cocktails.json'); return { ok: true, json: async () => catalog }; }
 });
 vm.runInContext(await fs.readFile(path.join(root, 'src/main/resources/static/engine.js'), 'utf8'), context);

@@ -1,4 +1,4 @@
-package com.hana.lastcall;
+package com.hana.cocktailbfs;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.*;
 class ApiIntegrationTest {
     @Autowired TestRestTemplate http;
     @Test void servesUIAndCatalogFromTheSameOrigin() {
-        assertThat(http.getForEntity("/", String.class).getBody()).contains("Last Call", "runtime-config.js");
+        assertThat(http.getForEntity("/", String.class).getBody()).contains("Cocktail BFS", "runtime-config.js");
         assertThat(http.getForEntity("/runtime-config.js", String.class).getBody()).contains("'api'");
         var result = http.getForEntity("/api/catalog", Map.class);
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);

@@ -1,4 +1,4 @@
-package com.hana.lastcall.api;
+package com.hana.cocktailbfs.api;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.*;
 import org.springframework.web.bind.MethodArgumentNotValidException;

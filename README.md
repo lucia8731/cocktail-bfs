@@ -1,8 +1,8 @@
-# Last Call
+# Cocktail BFS
 
 A student data structures experiment: step through **breadth-first search** on a graph of 24 cocktail recipes.
 
-[Live app](https://lucia8731.github.io/last-call/) · [Architecture](docs/ARCHITECTURE.md) · [日本語ガイド](docs/LEARNING_GUIDE.ja.md)
+[Live app](https://lucia8731.github.io/cocktail-bfs/) · [Architecture](docs/ARCHITECTURE.md) · [日本語ガイド](docs/LEARNING_GUIDE.ja.md)
 
 ![Graph and BFS state](docs/graph.jpg)
 
@@ -19,10 +19,10 @@ The interface uses white and green, two font families, and no decorative illustr
 
 | Structure | Role | Implementation |
 |---|---|---|
-| Adjacency list | Store each recipe’s neighbors | [RecipeGraph.java](src/main/java/com/hana/lastcall/algorithm/RecipeGraph.java) |
-| `ArrayDeque` | FIFO frontier for BFS | [RecipeGraph.java](src/main/java/com/hana/lastcall/algorithm/RecipeGraph.java) |
-| Visited set | Mark a vertex when enqueued; avoid cycles | [RecipeGraph.java](src/main/java/com/hana/lastcall/algorithm/RecipeGraph.java) |
-| Parent map | Reconstruct a shortest path | [RecipeGraph.java](src/main/java/com/hana/lastcall/algorithm/RecipeGraph.java) |
+| Adjacency list | Store each recipe’s neighbors | [RecipeGraph.java](src/main/java/com/hana/cocktailbfs/algorithm/RecipeGraph.java) |
+| `ArrayDeque` | FIFO frontier for BFS | [RecipeGraph.java](src/main/java/com/hana/cocktailbfs/algorithm/RecipeGraph.java) |
+| Visited set | Mark a vertex when enqueued; avoid cycles | [RecipeGraph.java](src/main/java/com/hana/cocktailbfs/algorithm/RecipeGraph.java) |
+| Parent map | Reconstruct a shortest path | [RecipeGraph.java](src/main/java/com/hana/cocktailbfs/algorithm/RecipeGraph.java) |
 | Playback state | Reconstruct queue/set/map at any recorded step | [graph-state.js](src/main/resources/static/graph-state.js) |
 
 
@@ -31,8 +31,8 @@ The interface uses white and green, two font families, and no decorative illustr
 Requires JDK 17+ and Maven 3.6.3+. No database, API keys, or frontend build are required.
 
 ```bash
-git clone https://github.com/lucia8731/last-call.git
-cd last-call
+git clone https://github.com/lucia8731/cocktail-bfs.git
+cd cocktail-bfs
 mvn spring-boot:run
 ```
 
@@ -40,10 +40,10 @@ Open **http://localhost:8080**. The footer shows **Java / Spring Boot**; graph q
 
 ```bash
 mvn verify
-java -jar target/last-call-1.0.0.jar
+java -jar target/cocktail-bfs-1.0.0.jar
 ```
 
-**Runtime:** GitHub Pages and the secondary [hosted demo](https://last-call-algorithm-lab.livelyearth32768.chatgpt.site) run equivalent browser algorithms on the shared catalog. They do not call a hosted JVM. The runtime is labeled in the footer. The Spring Boot application serves the same interface with its Java REST API; failures never silently change engines.
+**Runtime:** GitHub Pages and the secondary [hosted demo](https://cocktail-bfs.livelyearth32768.chatgpt.site) run equivalent browser algorithms on the shared catalog. They do not call a hosted JVM. The runtime is labeled in the footer. The Spring Boot application serves the same interface with its Java REST API; failures never silently change engines.
 
 ## Tests
 

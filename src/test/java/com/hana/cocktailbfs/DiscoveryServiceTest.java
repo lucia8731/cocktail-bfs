@@ -1,8 +1,8 @@
-package com.hana.lastcall;
+package com.hana.cocktailbfs;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hana.lastcall.catalog.CocktailCatalog;
-import com.hana.lastcall.service.DiscoveryService;
-import com.hana.lastcall.service.DiscoveryService.Match;
+import com.hana.cocktailbfs.catalog.CocktailCatalog;
+import com.hana.cocktailbfs.service.DiscoveryService;
+import com.hana.cocktailbfs.service.DiscoveryService.Match;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

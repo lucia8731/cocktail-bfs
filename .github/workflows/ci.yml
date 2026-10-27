@@ -31,9 +31,9 @@ jobs:
         run: python3 scripts/build-demo.py
       - uses: actions/upload-artifact@v4
         with:
-          name: last-call-jar
-          path: target/last-call-1.0.0.jar
+          name: cocktail-bfs-jar
+          path: target/cocktail-bfs-1.0.0.jar
       - uses: actions/upload-artifact@v4
         with:
-          name: last-call-demo
+          name: cocktail-bfs-demo
           path: dist/

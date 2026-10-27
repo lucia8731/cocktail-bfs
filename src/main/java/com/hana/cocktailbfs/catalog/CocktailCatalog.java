@@ -1,10 +1,10 @@
-package com.hana.lastcall.catalog;
+package com.hana.cocktailbfs.catalog;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hana.lastcall.model.Cocktail;
-import com.hana.lastcall.algorithm.Trie;
-import com.hana.lastcall.algorithm.RecipeGraph;
+import com.hana.cocktailbfs.model.Cocktail;
+import com.hana.cocktailbfs.algorithm.Trie;
+import com.hana.cocktailbfs.algorithm.RecipeGraph;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
